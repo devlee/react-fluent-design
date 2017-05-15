@@ -81,6 +81,10 @@ const config: webpack.Configuration = {
           ],
         }),
       },
+      {
+        test: /\.json$/,
+        use: ['json-loader'],
+      },
     ],
   },
   output: {

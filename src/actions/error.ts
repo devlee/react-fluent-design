@@ -1,0 +1,3 @@
+export const NETWORK_ERROR = 'NETWORK_ERROR';
+export const RESPONSE_ERROR = 'RESPONSE_ERROR';
+

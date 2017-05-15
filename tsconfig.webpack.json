@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "pretty": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "./src/server.ts"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

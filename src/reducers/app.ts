@@ -1,7 +1,9 @@
 import { GET_APP_DATA, SET_APP_DATA } from '../actions';
 
+import * as config from '../../config.json';
+
 const initState: any = {
-  name: 'react-fluent-design',
+  name: config.appName,
 };
 
 export default ((state: any = initState, action: any): any => {

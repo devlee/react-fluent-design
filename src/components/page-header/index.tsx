@@ -8,6 +8,11 @@ class PageHeader extends React.PureComponent<any, any> {
       <header className={styles.root}>
         <nav>
           <Link to="/" className={styles.navItem}>Home</Link>
+          <Link to="/light" className={styles.navItem}>Light</Link>
+          <Link to="/depth" className={styles.navItem}>Depth</Link>
+          <Link to="/motion" className={styles.navItem}>Motion</Link>
+          <Link to="/material" className={styles.navItem}>Material</Link>
+          <Link to="/scale" className={styles.navItem}>Scale</Link>
           <Link to="/about" className={styles.navItem}>About</Link>
         </nav>
       </header>

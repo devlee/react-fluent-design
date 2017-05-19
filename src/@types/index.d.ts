@@ -17,3 +17,8 @@ declare module '*.png' {
   const content: any;
   export = content;
 }
+
+declare module 'webpack-visualizer-plugin' {
+  const content: any;
+  export = content;
+}

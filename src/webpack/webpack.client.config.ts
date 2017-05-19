@@ -1,6 +1,7 @@
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as path from 'path';
 import * as webpack from 'webpack';
+import * as Visualizer from 'webpack-visualizer-plugin';
 
 const baseDir = path.resolve(__dirname, '../..');
 const { optimize } = webpack;
@@ -109,6 +110,7 @@ const config: webpack.Configuration = {
       filename: 'vendor.js',
       name: 'vendor',
     }),
+    new Visualizer(),
   ],
   resolve: {
     alias: {

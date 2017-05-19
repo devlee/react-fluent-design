@@ -1,0 +1,65 @@
+.root {
+  padding: 100px;
+  text-align: center;
+  position: relative;
+  perspective: 600px;
+}
+.main {
+  background-color: rgba(255, 255, 255, .9);
+  box-sizing: border-box;
+  width: 600px;
+  height: 600px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.x,
+.y,
+.z {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  &:before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &:after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.x {
+  background-color: red;
+}
+
+.y {
+  transform: rotateZ(-90deg);
+  background-color: yellow;
+}
+
+.z {
+  transform: rotateY(-90deg);
+  background-color: blue;
+}
+
+.content {
+}
+
+.options {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

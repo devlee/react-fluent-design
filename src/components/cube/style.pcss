@@ -1,0 +1,18 @@
+@import 'variables.pcss';
+
+.root {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transition: transform .5s linear;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  /*transform: `rotateX(-35.3deg) rotateY(45deg)`,*/
+}
+
+.surface {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(transparent 30%,rgba(16,58,177,.5) 100%);
+}

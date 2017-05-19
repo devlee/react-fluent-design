@@ -5,6 +5,7 @@
     "no-console": [
       "warn"
     ],
-    "jsx-no-multiline-js": ["off"]
+    "jsx-no-multiline-js": ["off"],
+    "jsx-curly-spacing": ["off"]
   }
 }

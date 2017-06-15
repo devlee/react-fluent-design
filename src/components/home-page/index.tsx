@@ -4,7 +4,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import homePageSelector from '../../selector/home-page-selector';
 import Coordinate from '../coordinate';
-import Cube from '../cube';
+import Ball from '../ball';
 
 @(connect(homePageSelector) as any)
 @autobind
@@ -30,9 +30,7 @@ class HomePage extends React.PureComponent<any, any> {
           <h3>Light</h3>
           <section>
             <Coordinate>
-              <Cube size={50} z={-100}/>
-              <Cube size={50}/>
-              <Cube size={50} z={100}/>
+              <Ball size={300} />
             </Coordinate>
           </section>
           <h3>Depth</h3>

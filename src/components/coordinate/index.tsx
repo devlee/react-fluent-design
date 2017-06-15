@@ -1,6 +1,14 @@
 import * as styles from '@src/components/coordinate/style.pcss';
 import * as React from 'react';
 
+/**
+ *
+ * <Coordinate>
+ *   <Cube size={50} z={-100}/>
+ *   <Cube size={50}/>
+ *   <Cube size={50} z={100}/>
+ * </Coordinate>
+ */
 class Coordinate extends React.PureComponent<any, any> {
   private t: any = null;
 

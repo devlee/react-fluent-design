@@ -35,6 +35,7 @@ class HomePage extends React.PureComponent<any, any> {
           </h1>
           <p>A step into the future of sensory experiences.</p>
           <Moudle title={'Light'}>
+            <h4>Chrome Only</h4>
             <Image
               asWrapper={true}
               url={'https://www.bing.com/az/hprichbg/rb/SneffelsRange_EN-US9227240987_1920x1080.jpg'}

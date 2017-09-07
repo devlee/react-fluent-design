@@ -49,10 +49,10 @@ class Acrylic extends React.PureComponent<any, any> {
     const rootClass = classnames({
       [styles.root]: true,
       [className]: Boolean(className),
+      [styles.showLight]: showLight,
     });
     const lightClass = classnames({
       [styles.light]: true,
-      [styles.show]: showLight,
     });
     const lightStyle = {
       left: lightLeft,

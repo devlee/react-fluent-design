@@ -87,7 +87,7 @@ const config: webpack.Configuration = {
         use: ['json-loader'],
       },
       {
-        test: /\.png$/,
+        test: /\.(png|jpg)$/,
         use: [
           {
             loader: 'url-loader',

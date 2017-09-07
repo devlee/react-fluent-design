@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 import homePageSelector from '../../selector/home-page-selector';
 import Moudle from '../module';
 
+import Acrylic from '../acrylic';
+
+import Image from '../image';
+
 import * as chrome from '@src/style/img/170906-sun-flare-chrome.png';
 import * as safari from '@src/style/img/170906-sun-flare-safari.png';
 
@@ -22,6 +26,7 @@ class HomePage extends React.PureComponent<any, any> {
   public render(): (JSX.Element | null) {
     console.log('[render] ./src/components/homt-page/index.tsx');
     const { appName } = this.props;
+    const lightWords = ['L', 'I', 'G', 'H', 'T'];
     return (
       <div className={styles.root}>
         <div className={styles.container}>
@@ -30,7 +35,22 @@ class HomePage extends React.PureComponent<any, any> {
           </h1>
           <p>A step into the future of sensory experiences.</p>
           <Moudle title={'Light'}>
-            123
+            <Image
+              asWrapper={true}
+              url={'https://www.bing.com/az/hprichbg/rb/SneffelsRange_EN-US9227240987_1920x1080.jpg'}
+            >
+              <div className={styles.l}>
+                <ul className={styles.lItems}>
+                  {
+                    Array.from({ length: 5}).map((item, idx) => (
+                      <Acrylic className={styles.lItem}>
+                        {lightWords[idx]}
+                      </Acrylic>
+                    ))
+                  }
+                </ul>
+              </div>
+            </Image>
           </Moudle>
           <Moudle title={'Depth'}>
             123
@@ -39,11 +59,21 @@ class HomePage extends React.PureComponent<any, any> {
             123
           </Moudle>
           <Moudle title={'Material'}>
-            <h4>chrome</h4>
+            <h4>Chrome</h4>
+            <ul>
+              <li>
+                <p>
+                  Backdrop filter is currently baked under CSS Filters Level 2, and at the time of the writing,
+                  it only works work in Safari 9 with the -webkit- prefix,
+                  and Chrome as well as Opera by enabling the “Experimental Web Platform Features”
+                  under the chrome://flags menu.
+                </p>
+              </li>
+            </ul>
             <img src={chrome} alt="chrome" className={styles.maImg} />
-            <h4>safari</h4>
+            <h4>Safari</h4>
             <img src={safari} alt="safari" className={styles.maImg} />
-            <h4>example</h4>
+            <h4>Example</h4>
             <div className={styles.ma}>
               {
                 Array.from({ length: 16}).map((item, idx) => {
@@ -61,14 +91,16 @@ class HomePage extends React.PureComponent<any, any> {
                   const opacityValue = line * 0.5;
                   /* tslint:disable object-literal-sort-keys */
                   const divStyle = {
-                    webkitBackdropFilter: `blur(${blurValue}px)`,
+                    WebkitBackdropFilter: `blur(${blurValue}px)`,
                     backdropFilter: `blur(${blurValue}px)`,
                     backgroundColor: `rgba(255, 255, 255, ${opacityValue})`,
                   };
                   return (
                     <div className={styles.maItem} style={divStyle}>
+                      <div className={styles.maItemContent}>
                       blur: {blurValue}px<br />
                       rgba: 255, 255, 255, {opacityValue}
+                      </div>
                     </div>
                   );
                 })

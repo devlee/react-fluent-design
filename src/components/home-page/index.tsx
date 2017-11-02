@@ -44,7 +44,7 @@ class HomePage extends React.PureComponent<any, any> {
                 <ul className={styles.lItems}>
                   {
                     Array.from({ length: 5}).map((item, idx) => (
-                      <Acrylic className={styles.lItem}>
+                      <Acrylic className={styles.lItem} key={idx}>
                         {lightWords[idx]}
                       </Acrylic>
                     ))
@@ -97,7 +97,7 @@ class HomePage extends React.PureComponent<any, any> {
                     backgroundColor: `rgba(255, 255, 255, ${opacityValue})`,
                   };
                   return (
-                    <div className={styles.maItem} style={divStyle}>
+                    <div className={styles.maItem} style={divStyle} key={idx}>
                       <div className={styles.maItemContent}>
                       blur: {blurValue}px<br />
                       rgba: 255, 255, 255, {opacityValue}

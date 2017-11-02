@@ -1,9 +1,12 @@
 import * as styles from '@src/components/module/style.pcss';
+
 import * as React from 'react';
+
+import * as PropTypes from 'prop-types';
 
 class Module extends React.PureComponent<any, any> {
   private static propTypes = {
-    title: React.PropTypes.string,
+    title: PropTypes.string,
   };
 
   private static defaultProps = {

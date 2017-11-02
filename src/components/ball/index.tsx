@@ -1,11 +1,14 @@
 import * as styles from '@src/components/ball/style.pcss';
+
 import * as React from 'react';
+
+import * as PropTypes from 'prop-types';
 
 const baseSize = 100;
 
 class Ball extends React.PureComponent<any, any> {
   private static propTypes = {
-    size: React.PropTypes.number,
+    size: PropTypes.number,
   };
   private static defaultProps = {
     size: baseSize,
